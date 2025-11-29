@@ -1,0 +1,13 @@
+
+{
+  "title": "Create New Account",
+  "name": "Full Name",
+  "email": "Email",
+  "password": "Password",
+  "signup": "Sign Up",
+  "role patient": "Patient",
+  "role doctor": "Doctor",
+  "medLicense": "Medical License Number",
+  "agreeTerms": "I agree to the Terms and Conditions",
+  "selectDoctor":"-- Select Doctor --"
+}
