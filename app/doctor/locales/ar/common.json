@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "overview": "نظرة عامة",
+    "patients": "قائمة المرضى",
+    "analysis": "إجراء تحليل",
+    "messages": "الرسائل",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج"
+  },
+  "header": {
+    "searchPlaceholder": "البحث عن مريض...",
+    "notifications": "الإشعارات"
+  },
+  "stats": {
+    "totalPatients": "إجمالي المرضى",
+    "pendingAnalysis": "تحاليل منتظرة",
+    "criticalCases": "حالات حرجة"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Welcome Back",
+  "subtitle": "Login to your account to continue.",
+  "form": {
+    "title": "Login",
+    "description": "Enter your credentials to access your account",
+    "orLoginWith": "Or log in with",
+    "fields": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "forgotPassword": "Forgot your password?",
+    "loginButton": "Login",
+    "noAccountLink": "Don't have an account? Sign Up"
+  }
+}

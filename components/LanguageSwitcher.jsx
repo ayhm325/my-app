@@ -1,14 +1,18 @@
 "use client";
 
-import { useLanguage } from "../app/home/context/LanguageContext";
+import { useLanguage } from "../app/LanguageContext";
 import { Sun, Moon } from "lucide-react";
 
 export default function LanguageSwitcher() {
   const { language, toggleLanguage } = useLanguage();
 
+  const langIcon = language === "ar" ? <Sun size={20} /> : <Moon size={20} />;
+  const langText = language === "ar" ? "English" : "العربية";
+
   return (
     <button
       onClick={toggleLanguage}
+      aria-label="Toggle Language"
       className="
         relative flex items-center justify-center
         px-5 py-2 rounded-full
@@ -19,22 +23,15 @@ export default function LanguageSwitcher() {
         focus:outline-none focus:ring-4 focus:ring-purple-300
       "
     >
-      {/* الأيقونة */}
-      <span className="mr-2">
-        {language === "ar" ? <Sun size={20} /> : <Moon size={20} />}
-      </span>
+      <span className="mr-2">{langIcon}</span>
+      <span className="uppercase tracking-wider">{langText}</span>
 
-      {/* النص */}
-      <span className="uppercase tracking-wider">
-        {language === "ar" ? "English" : "العربية"}
-      </span>
-
-      {/* تأثير خلفية هولوغرام خفيف */}
       <span className="
         absolute -inset-0.5 rounded-full
         bg-gradient-to-r from-purple-300 via-pink-300 to-red-300
         opacity-20 blur-xl
         animate-pulse
+        pointer-events-none
       "></span>
     </button>
   );

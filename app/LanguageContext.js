@@ -1,5 +1,5 @@
-"use client";
 
+"use client";
 import { createContext, useState, useContext } from "react";
 
 // إنشاء الـ Context
@@ -19,7 +19,6 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
-
 
 // Hook للاستخدام أسهل
 export const useLanguage = () => useContext(LanguageContext);

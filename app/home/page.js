@@ -1,4 +1,6 @@
-import { LanguageProvider } from "./context/LanguageContext";
+"use client";
+
+import { LanguageProvider } from "../LanguageContext";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SecOne from "./components/SecOne";
@@ -6,32 +8,33 @@ import SecTwo from "./components/SecTwo";
 import SecThree from "./components/SecThree";
 import Footer from "./components/Footer";
 
-
 export default function Home() {
   return (
     <LanguageProvider>
-      <main >
-        
-        <Header/>
+      <main className="flex flex-col min-h-screen">
+      
+        {/* رأس الصفحة */}
+        <Header />
 
-        <section>
-          <Hero/>
+        {/* أقسام الصفحة */}
+        <section id="hero" className="w-full">
+          <Hero />
         </section>
 
-        <section>
+        <section id="sec-one" className="w-full py-12">
           <SecOne />
         </section>
-       
-        <section>
+
+        <section id="sec-two" className="w-full py-12">
           <SecTwo />
         </section>
-        
-        <section>
+
+        <section id="sec-three" className="w-full py-12">
           <SecThree />
         </section>
-       
-        <Footer />
 
+        {/* تذييل الصفحة */}
+        <Footer />
       </main>
     </LanguageProvider>
   );

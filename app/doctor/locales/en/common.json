@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "patients": "Patients List",
+    "analysis": "Run Analysis",
+    "messages": "Messages",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "header": {
+    "searchPlaceholder": "Search for a patient...",
+    "notifications": "Notifications"
+  },
+  "stats": {
+    "totalPatients": "Total Patients",
+    "pendingAnalysis": "Pending Analysis",
+    "criticalCases": "Critical Cases"
+  }
+}

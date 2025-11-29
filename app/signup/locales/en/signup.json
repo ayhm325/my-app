@@ -1,13 +1,23 @@
-
 {
-  "title": "Create New Account",
-  "name": "Full Name",
-  "email": "Email",
-  "password": "Password",
-  "signup": "Sign Up",
-  "role patient": "Patient",
-  "role doctor": "Doctor",
-  "medLicense": "Medical License Number",
-  "agreeTerms": "I agree to the Terms and Conditions",
-  "selectDoctor":"-- Select Doctor --"
+  "title": "Pneumonia Detection System",
+  "subtitle": "Start your free use today. No credit card required.",
+  "features": {
+    "diagnosis": { "title": "Accurate and Fast Diagnosis", "description": "Using the latest AI technologies." },
+    "privacy": { "title": "Patient Data Privacy", "description": "We adhere to the highest security and privacy standards." },
+    "connected": { "title": "Connected to Medical Facilities", "description": "Easy integration with other health systems." }
+  },
+  "form": {
+    "title": "Create a new account",
+    "description": "Join us to help in early detection",
+    "orSignupWith": "Or sign up with email",
+    "role": { "doctor": "Doctor", "patient": "Patient" },
+    "fields": {
+      "firstName": "First Name", "lastName": "Last Name", "email": "Email", "password": "Password",
+      "licenseNumber": "Medical License Number", "specialty": "Medical Specialty", "hospital": "Hospital or Clinic Name",
+      "selectDoctor": "Select your attending doctor", "dateOfBirth": "Date of Birth", "emergencyContact": "Emergency Contact Number"
+    },
+    "signupButton": "Sign Up",
+    "termsText": "By creating an account, you agree to our Terms of Service and Privacy Policy.",
+    "loginLink": "Already have an account? Login"
+  }
 }

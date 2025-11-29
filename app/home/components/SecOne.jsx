@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../../LanguageContext";
 import secOneAr from "../../../src/locales/ar/secOne.json";
 import secOneEn from "../../../src/locales/en/secOne.json";
 import { useState, useEffect, useRef } from "react";

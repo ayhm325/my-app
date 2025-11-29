@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../../LanguageContext";
 import footerAr from "../../../src/locales/ar/footer.json";
 import footerEn from "../../../src/locales/en/footer.json";
 import { useState } from "react";

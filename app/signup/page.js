@@ -1,34 +1,41 @@
-"use client";
+// app/signup/page.js
+'use client';
 
-import HeaderSignUp from "./HeaderSignup";
-import SignUpForm from "./SignUpForm";
-import SideDecor from "./SideDecor";
-import { LanguageProvider } from "../home/context/LanguageContext";
+import { useState } from 'react';
+import { LanguageProvider } from '../LanguageContext'; // استيراد الـ Provider
+import SideDecor from './components/SideDecor';
+import SignUpForm from './components/SignUpForm';
 
-export default function SignUpPage() {
+export default function SignupPage() {
+  const [role, setRole] = useState(null);
+  const [formData, setFormData] = useState({
+    firstName: '', lastName: '', email: '', password: '',
+    licenseNumber: '', specialty: '', hospital: '',
+    selectedDoctor: '', dateOfBirth: '', emergencyContact: '',
+  });
+
+  const handleRoleChange = (selectedRole) => setRole(selectedRole);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data Submitted:', { role, ...formData });
+    alert('تم إرسال البيانات بنجاح! (تحقق من الكونسول)');
+  };
+
   return (
     <LanguageProvider>
-      <HeaderSignUp />
-
-      <main className="flex min-h-screen items-center justify-center bg-gray-100">
-        <div className="flex w-full max-w-full bg-white rounded-lg shadow-lg overflow-hidden"
-
-           style={{background: "linear-gradient(135deg, #a18cd1 20%, #3f8efc 100%)",}}
-        >
-
-
-
-          {/* الجزء الخاص بالديكور */}
-          <section className="hidden md:flex w-1/2 items-center justify-center bg-purple-200">
-            <SideDecor />
-          </section>
-
-          {/* جزء الفورم */}
-          <section className="w-full md:w-1/2 flex items-center justify-center p-8">
-            <SignUpForm />
-          </section>
-
-        </div>
+      <main className="flex min-h-screen">
+        <SideDecor />
+        <SignUpForm
+          role={role}
+          formData={formData}
+          onRoleChange={handleRoleChange}
+          onInputChange={handleInputChange}
+          onSubmit={handleSubmit}
+        />
       </main>
     </LanguageProvider>
   );
